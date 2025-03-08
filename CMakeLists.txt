@@ -1,13 +1,14 @@
-cmake_minimum_required (VERSION 3.10.2)
-project (ST-2)
+cmake_minimum_required(VERSION 3.15)
+project(CircleProject)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -g")
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Указываем использовать динамическую версию Runtime Library
+if(MSVC)
+    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+endif()
 
-set(tool_dest "bin")
-set(lib_dest "lib")
-set(include_dest "include/")
-
+add_subdirectory(googletest)
 add_subdirectory(src)
 add_subdirectory(test)
