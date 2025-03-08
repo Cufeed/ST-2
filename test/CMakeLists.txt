@@ -1,22 +1,10 @@
-add_executable(Tests
-    tests.cpp
-    AllTests.cpp
-)
+add_executable(${PROJECT_NAME}.test
+  AllTests.cpp
+  tests.cpp)
+target_link_libraries(${PROJECT_NAME}.test
+  ${PROJECT_NAME} gtest pthread)
+target_compile_definitions(${PROJECT_NAME}.test 
+  PRIVATE TEST_DIR="${CMAKE_CURRENT_LIST_DIR}/test")
 
-target_include_directories(Tests
-    PRIVATE
-        ${CMAKE_SOURCE_DIR}/include
-)
-
-# Явно указываем линковать динамическую CRT для GoogleTest
-target_compile_options(gtest PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-target_compile_options(gtest_main PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-
-target_link_libraries(Tests
-    CircleLib
-    gtest
-    gtest_main
-)
-
-enable_testing()
-add_test(NAME CircleTests COMMAND Tests)
+install(TARGETS ${PROJECT_NAME}.test
+        DESTINATION "${tool_dest}")
