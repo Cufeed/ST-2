@@ -1,10 +1,10 @@
 // Copyright 2025 UNN-CS Team
 
-#include <gtest/gtest.h>
-#include <corecrt_math_defines.h>
 #include "circle.h"
 #include "tasks.h"
 #include <cstdint>
+#include <gtest/gtest.h>
+#include <corecrt_math_defines.h>
 
 
 TEST(CircleTest, ConstructorInitialization) {
