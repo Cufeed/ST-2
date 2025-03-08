@@ -1,6 +1,8 @@
+// Copyright 2022 UNN-CS
+
 #include "circle.h"
-#include <cmath>
 #include <corecrt_math_defines.h>
+#include <cmath>
 #include <stdexcept>
 Circle::Circle(double r) {
     setRadius(r);

@@ -3,12 +3,12 @@
 #define INCLUDE_CIRCLE_H_
 #include <cstdint>
 class Circle {
-private:
+ private:
     double radius;
     double ference;
     double area;
 
-public:
+ public:
     Circle(double r);
     void setRadius(double r);
     void setFerence(double f);
