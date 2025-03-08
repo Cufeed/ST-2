@@ -2,9 +2,9 @@
 
 #include "circle.h"
 #include "tasks.h"
-#include <cstdint>
 #include <gtest/gtest.h>
 #include <corecrt_math_defines.h>
+#include <cstdint>
 
 
 TEST(CircleTest, ConstructorInitialization) {
