@@ -1,7 +1,10 @@
 // Copyright 2025 UNN-CS Team
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 #include <gtest/gtest.h>
-#include <corecrt_math_defines.h>
 #include <cstdint>
 #include "circle.h"
 #include "tasks.h"

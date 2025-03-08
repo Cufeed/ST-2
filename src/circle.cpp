@@ -1,7 +1,10 @@
 // Copyright 2022 UNN-CS
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 #include "circle.h"
-#include <corecrt_math_defines.h>
 #include <cmath>
 #include <stdexcept>
 Circle::Circle(double r) {
